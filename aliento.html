@@ -29,7 +29,15 @@
     <p id="cartaTexto"></p>
 </div>
         <div class="carta">
+<div class="audio-box">
+    <button onclick="reproducirMusica()">🎵 Reproducir canción</button>
+    <button onclick="pausarMusica()">⏸️ Pausar</button>
 
+    <audio id="musicaAliento">
+        <source src="musica/aliento.mp3" type="audio/mpeg">
+        Tu navegador no soporta audio.
+    </audio>
+</div>
 <button onclick="escribirCarta(); reproducirMusica();">
     Oprímelo 🤍
 </button>
