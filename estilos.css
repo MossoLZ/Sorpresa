@@ -1,0 +1,182 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(180deg, #fde2e4, #fadadd);
+    color: #4a148c;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* TÍTULOS */
+h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 18px;
+    max-width: 800px;
+}
+
+/* BOTONES */
+a, button {
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 30px;
+    padding: 16px 28px;
+    margin: 10px;
+    background: linear-gradient(45deg, #ec407a, #f06292);
+    color: white;
+    box-shadow: 0 8px 15px rgba(0,0,0,.25);
+    transition: transform .3s, box-shadow .3s;
+}
+
+a:hover, button:hover {
+    transform: translateY(-6px) scale(1.05);
+    box-shadow: 0 14px 25px rgba(0,0,0,.3);
+}
+
+/* CONTENEDOR TEXTO */
+.caja {
+    background: white;
+    padding: 30px;
+    border-radius: 25px;
+    margin: 20px;
+    max-width: 900px;
+    text-align: left;
+    box-shadow: 0 10px 30px rgba(0,0,0,.25);
+}
+
+/* MENÚ VERTICAL */
+.menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* 🌸 FLORES */
+.flor {
+    position: fixed;
+    top: -40px;
+    font-size: 28px;
+    animation: caer linear forwards;
+}
+
+@keyframes caer {
+    to {
+        transform: translateY(120vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* 🌅 ATARDECER */
+#cielo {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    background: linear-gradient(#ff9a9e, #fad0c4);
+    overflow: hidden;
+}
+
+#sol {
+    width: 120px;
+    height: 120px;
+    background: #ff7043;
+    border-radius: 50%;
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* 🕯️ LUZ */
+.pantalla-negra {
+    background: black;
+    color: white;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pantalla-blanca {
+    background: white;
+    color: #4a148c;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* ✨ ALGO ESPECIAL */
+.especial {
+    background: linear-gradient(180deg, #a18cd1, #fbc2eb);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+#canvasNombre {
+    margin-top: 20px;
+    border-radius: 20px;
+    background: white;
+}
+#luna {
+    width: 80px;
+    height: 80px;
+    background: #f5f3ce;
+    border-radius: 50%;
+    position: absolute;
+    top: 80px;
+    right: 20%;
+    opacity: 0;
+}
+
+.estrella {
+    position: absolute;
+    color: white;
+    font-size: 10px;
+    opacity: 0;
+}
+
+#mensajeFinal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 28px;
+    color: white;
+    text-align: center;
+    display: none;
+}
+#cartaContainer {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 20px;
+    font-size: 18px;
+    line-height: 1.8;
+    text-align: justify;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+#cartaTexto {
+    white-space: pre-line;
+}
